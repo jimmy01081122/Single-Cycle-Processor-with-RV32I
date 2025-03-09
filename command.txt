@@ -1,0 +1,4 @@
+iverilog -o a.out testbench.v module.v
+vvp a.out
+gtkwave testbench.vcd
+
