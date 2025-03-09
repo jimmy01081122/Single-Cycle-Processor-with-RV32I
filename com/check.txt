@@ -1,0 +1,53 @@
+IMM HERE : opcode = 0000000, imm_out = 00000000
+
+ALUCTR HERE : ALUOp = xx, Funct3 = 000, Funct7 = 0000000, ALUControl = 0000
+
+CRT HERE : Opcode = 0000000, RegWrite = 0, ALUSrc = 0, MemRead = 0, MemWrite = 0, Branch = 0, MemToReg = 0, ALUOp = 00
+
+ALUCTR HERE : ALUOp = 00, Funct3 = 000, Funct7 = 0000000, ALUControl = 0000
+
+Time : 0 / TESTBENCH HERE : A = 00000010, B = 00000020, ALUOp = 00, ALUControl = 0000, Result = 00000000, Zero = 1, Imm_Out = 00000000
+
+IMM HERE : opcode = 0110011, imm_out = 00000000
+
+CRT HERE : Opcode = 0110011, RegWrite = 1, ALUSrc = 0, MemRead = 0, MemWrite = 0, Branch = 0, MemToReg = 0, ALUOp = 10
+
+ALUCTR HERE : ALUOp = 10, Funct3 = 000, Funct7 = 0000000, ALUControl = 0000
+
+Time : 15 / TESTBENCH HERE : A = 00000010, B = 00000020, ALUOp = 10, ALUControl = 0000, Result = 00000000, Zero = 1, Imm_Out = 00000000
+
+ALUCTR HERE : ALUOp = 10, Funct3 = 000, Funct7 = 0100000, ALUControl = 0001
+
+IMM HERE : opcode = 0110011, imm_out = 00000000
+
+Time : 30 / TESTBENCH HERE : A = 00000010, B = 00000020, ALUOp = 10, ALUControl = 0001, Result = 00000000, Zero = 1, Imm_Out = 00000000
+
+ALUCTR HERE : ALUOp = 10, Funct3 = 111, Funct7 = 0100000, ALUControl = 1001
+
+IMM HERE : opcode = 0110011, imm_out = 00000000
+
+Time : 45 / TESTBENCH HERE : A = 00000010, B = 000000ff, ALUOp = 10, ALUControl = 1001, Result = 00000000, Zero = 1, Imm_Out = 00000000
+
+ALUCTR HERE : ALUOp = 10, Funct3 = 110, Funct7 = 0100000, ALUControl = 1000
+
+Time : 60 / TESTBENCH HERE : A = 00000010, B = 000000ff, ALUOp = 10, ALUControl = 1000, Result = 00000000, Zero = 1, Imm_Out = 00000000
+
+IMM HERE : opcode = 0010011, imm_out = 00000000
+
+CRT HERE : Opcode = 0010011, RegWrite = 1, ALUSrc = 1, MemRead = 0, MemWrite = 0, Branch = 0, MemToReg = 0, ALUOp = 00
+
+ALUCTR HERE : ALUOp = 00, Funct3 = 110, Funct7 = 0100000, ALUControl = 0000
+
+Time : 70 / TESTBENCH HERE : A = 00000010, B = 000000ff, ALUOp = 00, ALUControl = 0000, Result = 00000000, Zero = 1, Imm_Out = 00000000
+
+IMM HERE : opcode = 0100011, imm_out = 00000400
+
+CRT HERE : Opcode = 0100011, RegWrite = 0, ALUSrc = 1, MemRead = 0, MemWrite = 1, Branch = 0, MemToReg = 0, ALUOp = 00
+
+Time : 80 / TESTBENCH HERE : A = 00000010, B = 000000ff, ALUOp = 00, ALUControl = 0000, Result = 00000000, Zero = 1, Imm_Out = 00000400
+
+IMM HERE : opcode = 1000111, imm_out = 00000000
+
+CRT HERE : Opcode = 1000111, RegWrite = 0, ALUSrc = 0, MemRead = 0, MemWrite = 0, Branch = 0, MemToReg = 0, ALUOp = 00
+
+Time : 90 / TESTBENCH HERE : A = 00000010, B = 000000ff, ALUOp = 00, ALUControl = 0000, Result = 00000000, Zero = 1, Imm_Out = 00000000
