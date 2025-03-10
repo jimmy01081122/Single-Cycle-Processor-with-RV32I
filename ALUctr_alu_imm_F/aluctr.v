@@ -57,12 +57,20 @@ module ALUctr (
     localparam ALU_OR   = 5'b01000;
     localparam ALU_AND  = 5'b01001;
     // 如果要支援立即數或其他運算，可再擴增
+      // B-type 指令
+    localparam ALU_BEQ  = 5'b01010;
+    localparam ALU_BNE  = 5'b01011;
+    localparam ALU_BLT  = 5'b01100;
+    localparam ALU_BGE  = 5'b01101;
+    localparam ALU_BLTU = 5'b01110;
+    localparam ALU_BGEU = 5'b01111;
 
     always @(*) begin
         case (opcode)
             7'b0110011: // R-type
                 begin
                     case (funct3)
+                    
     //ref : https://velog.io/@taegon1998/2.2-2-Basic-of-RISC-V
                         3'b000: // ADD / SUB
                             ALUop = (funct7[5] == 1'b1) ? ALU_SUB : ALU_ADD;
@@ -95,6 +103,16 @@ module ALUctr (
                         default: ALUop = ALU_ADD; 
                     endcase
                 end
+            7'b1100011: // B-type (Branch)
+                case (funct3)
+                    3'b000: ALUop = ALU_BEQ;
+                    3'b001: ALUop = ALU_BNE;
+                    3'b100: ALUop = ALU_BLT;
+                    3'b101: ALUop = ALU_BGE;
+                    3'b110: ALUop = ALU_BLTU;
+                    3'b111: ALUop = ALU_BGEU;
+                    default: ALUop = ALU_ADD;
+                endcase
             default:
                 ALUop = ALU_ADD; // 其他暫時預設成 ADD
         endcase

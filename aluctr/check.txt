@@ -1,0 +1,20 @@
+[R-type                                                                                                                              ADD] rd= 5 <- 00000005 (十進位=         5), zero=x
+[R-type                                                                                                                              SUB] rd= 6 <- 00000006 (十進位=         6), zero=x
+[R-type                                                                                                                              SLL] rd= 7 <- 00000007 (十進位=         7), zero=x
+[R-type                                                                                                                              SLT] rd= 8 <- 00000008 (十進位=         8), zero=x
+[R-type                                                                                                                             SLTU] rd= 9 <- 00000009 (十進位=         9), zero=x
+[R-type                                                                                                                              XOR] rd=10 <- 0000000a (十進位=        10), zero=x
+[R-type                                                                                                                              SRL] rd=11 <- 0000000b (十進位=        11), zero=x
+[R-type                                                                                                                              SRA] rd=12 <- 0000000c (十進位=        12), zero=x
+[R-type                                                                                                                               OR] rd=13 <- 0000000d (十進位=        13), zero=0
+[R-type                                                                                                                              AND] rd=14 <- 0000000e (十進位=        14), zero=x
+[I-type                                                                                                                             ADDI] rd=15 <- 0000000f (十進位=        15), zero=x
+[I-type                                                                                                                             SLTI] rd=16 <- 00000010 (十進位=        16), zero=x
+[I-type                                                                                                                            SLTIU] rd=17 <- 00000011 (十進位=        17), zero=x
+[I-type                                                                                                                             XORI] rd=18 <- 00000012 (十進位=        18), zero=x
+[I-type                                                                                                                              ORI] rd=19 <- 00000013 (十進位=        19), zero=0
+[I-type                                                                                                                             ANDI] rd=20 <- 00000014 (十進位=        20), zero=x
+[I-type shift                                                                                                                             SLLI] rd=21 <- 00000015 (十進位=        21), zero=x
+[I-type shift                                                                                                                             SRLI] rd=22 <- 00000016 (十進位=        22), zero=x
+[I-type shift                                                                                                                             SRAI] rd=23 <- 00000017 (十進位=        23), zero=x
+===== 測試結束 =====

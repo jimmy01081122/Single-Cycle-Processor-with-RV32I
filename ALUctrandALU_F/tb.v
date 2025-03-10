@@ -55,7 +55,7 @@ module ALU_ALUctr_tb;
         $display("ALU+aluctr : Testbench");
         $dumpfile("ALU_ALUctr_tb.vcd");  // VCD 波形輸出
         $dumpvars(0, ALU_ALUctr_tb);
-        /*
+        
         $display("------------------R-type 指令-------------------");
         // 測試 R-type 指令
         opcode = 7'b0110011; // R-type 指令
@@ -63,6 +63,7 @@ module ALU_ALUctr_tb;
         // 測試 ADD (0000000 funct7, 000 funct3)
         A = 32'h00000010; B = 32'h00000020; funct3 = 3'b000; funct7 = 7'b0000000;
         #10;
+        $display("ALUop : %b", ALUop);
         $display("ADD: A=%h, B=%h, Y=%h (Expect 30)", A, B, Y);
 
         // 測試 SUB (0100000 funct7, 000 funct3)
@@ -116,7 +117,7 @@ module ALU_ALUctr_tb;
         $display("------------------I-type 指令-------------------");
         // 測試 I-type 指令 基本差別在有沒有牽扯到imm
         opcode = 7'b0010011; // I-type 指令
-
+        $display("ALUop : %b", ALUop);
         // 測試 ADDI (000 funct3)
         A = 32'h00000010; B = 32'h00000010; funct3 = 3'b000; funct7 = 7'b0000000;
         #10;
@@ -143,6 +144,7 @@ module ALU_ALUctr_tb;
         $display("XORI: A=%h, B=%h, Y=%h (Expect FFF)", A, B, Y);
 
         // 測試 ORI (110 funct3)
+        
         A = 32'h0000F0F0; B = 32'h00F000F0; funct3 = 3'b110; funct7 = 7'b0000000;
         #10;
         $display("ORI: A=%h, B=%h, Y=%h (Expect F0F0F0F0)", A, B, Y);
@@ -157,13 +159,14 @@ module ALU_ALUctr_tb;
         #10;
         $display("Zero Flag: A=%h, B=%h, Y=%h, Zero=%b (Expect Zero=1)", A, B, Y, zero);
         #10
-        */
+        
         $display("------------------B-type 指令-------------------");
         opcode = 7'b1100011; // B-type 指令
         $display("op : %b", opcode);
         // 測試 BEQ (A == B)
         A = 32'h00000010; B = 32'h00000010; funct3 = 3'b000;
         #10;
+        $display("ALUop : %b", ALUop);
         $display("BEQ: A=%h, B=%h, Y=%b (Expect 1)", A, B, Y);
 
         // 測試 BNE (A != B)
